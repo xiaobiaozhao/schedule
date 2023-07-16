@@ -1,7 +1,7 @@
 name: CI-schedule
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/2 * * * *'
 jobs:
   test_schedule:
     runs-on: [self-hosted]
