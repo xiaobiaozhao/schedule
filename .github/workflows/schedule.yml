@@ -1,0 +1,12 @@
+name: CI-schedule
+on:
+  schedule:
+    - cron: '* * * * *'
+jobs:
+  test_schedule:
+    runs-on: [self-hosted]
+    steps:
+      - name: Not on Monday or Wednesday
+        run: echo "This step will be skipped on Monday and Wednesday"
+      - name: Every time
+        run: echo "This step will always run"
