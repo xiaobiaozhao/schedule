@@ -1,12 +1,10 @@
 name: CI-schedule
 on:
-  push:
-    branches: [main]
   schedule:
     - cron: '*/2 * * * *'
 jobs:
   test_schedule:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
     steps:
       - name: Not on Monday or Wednesday
         run: echo "This step will be skipped on Monday and Wednesday"
