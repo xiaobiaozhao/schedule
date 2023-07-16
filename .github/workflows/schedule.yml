@@ -6,7 +6,7 @@ on:
     - cron: '*/2 * * * *'
 jobs:
   test_schedule:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     steps:
       - name: Not on Monday or Wednesday
         run: echo "This step will be skipped on Monday and Wednesday"
